@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void Swap(int& a, int& b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
-}
-
 //Main Algorithm
 void SelectionSort(int iArray[], int size)
 {
@@ -21,7 +14,7 @@ void SelectionSort(int iArray[], int size)
                 temp = j;
             }
         }
-        Swap(iArray[i], iArray[temp]);
+        swap(iArray[i], iArray[temp]);
     }
 }
 

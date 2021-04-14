@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void Swap(int& a, int& b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
-}
-
 //Main Algorithm
 void BubbleSort(int iArray[], int size)
 {
@@ -17,7 +10,7 @@ void BubbleSort(int iArray[], int size)
         {
             if (iArray[j] > iArray[j + 1])
             {
-                Swap(iArray[j], iArray[j + 1]);
+                swap(iArray[j], iArray[j + 1]);
             }
         }
     }

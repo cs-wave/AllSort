@@ -1,11 +1,19 @@
+import java.util.*;
+
 public class Main {
+    private static final int ARRAY_SIZE = 1000;
 
     public static void main(String[] args) {
-        int[] arr = { 1,5,9,3,2,4,7,8,6,0 };
-        bubbleSort(arr);
-        
-        for(int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        Integer[] arr = new Integer[ARRAY_SIZE];
+        for(int i = 0; i < ARRAY_SIZE; i++) {
+            arr[i] = i;
+        }
+        Collections.shuffle(Arrays.asList(arr));
+        int[] newArr = Arrays.stream(arr).mapToInt(Integer::intValue).toArray();
+        bubbleSort(newArr);
+
+        for(int i : newArr) {
+            System.out.println(i);
         }
     }
 

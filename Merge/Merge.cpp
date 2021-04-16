@@ -44,7 +44,7 @@ void MergeSort(int array[], int begin, int end)
                 temp[i++] = array[first_division++];
             }
         }
-        for (i = begin; i < end + 1; ++i)
+        for (i = begin; i < end + 1; i++)
         {
             array[i] = temp[i - begin];
         }

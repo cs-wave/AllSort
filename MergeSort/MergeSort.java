@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Merge {
+public class MergeSort {
     private static final int ARRAY_SIZE = 1000;
 
     public static void main(String[] args) {

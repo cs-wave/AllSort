@@ -27,7 +27,6 @@ public class HeapSort {
         }
     }
 
-
     public static void swap(int[] arr, int idx1, int idx2) {
         int tmp = arr[idx2];
         arr[idx2] = arr[idx1];

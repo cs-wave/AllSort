@@ -1,3 +1,4 @@
+//Pivot is the rightmost value of the segmented data
 #include <iostream>
 using namespace std;
 

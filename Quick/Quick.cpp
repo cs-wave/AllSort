@@ -1,4 +1,7 @@
-void QuickSort(int iArray[], int iLow, int iHigh) 
+#include <iostream>
+using namespace std;
+
+void QuickSort(int iArray[], int iLow, int iHigh)
 {
 	if (iLow >= iHigh)
 	{
@@ -13,7 +16,17 @@ void QuickSort(int iArray[], int iLow, int iHigh)
 			swap(iArray[++i], iArray[j]);
 		}
 	}
-	Swap(iArray[++i], iPivot);
+	swap(iArray[++i], iPivot);
 	QuickSort(iArray, iLow, i - 1);
 	QuickSort(iArray, i + 1, iHigh);
+}
+
+int main()
+{
+	int iArray[] = { 89,408,8,4486,4648,8048,804,486,0,40048,8,40408,4086,48 };
+	QuickSort(iArray, 0, 13);
+	for (int i = 0; i < 14; i++)
+	{
+		cout << iArray[i] << ", ";
+	}
 }

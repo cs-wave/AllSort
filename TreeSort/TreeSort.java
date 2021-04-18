@@ -29,8 +29,8 @@ public class TreeSort {
     public static void treeSort(int[] arr, int len) {
         if(len < 1) return;
 
-        BinaryTree root = new BinaryTree(arr[0]);
-        for(int i = 1; i < len; i++) {
+        BinaryTree root = null;
+        for(int i = 0; i < len; i++) {
             root = insert(root, arr[i]);
         }
         inOrder(root, arr);

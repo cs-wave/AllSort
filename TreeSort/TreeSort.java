@@ -23,9 +23,7 @@ public class TreeSort {
         int[] newArr = Arrays.stream(arr).mapToInt(Integer::intValue).toArray();
         treeSort(newArr, ARRAY_SIZE);
 
-        for(int i : newArr) {
-            System.out.println(i);
-        }
+        print_array("TreeSort", newArr);
     }
 
     public static void treeSort(int[] arr, int len) {
@@ -57,6 +55,13 @@ public class TreeSort {
             inOrder(t.left, arr);
             arr[index++] = t.value;
             inOrder(t.right, arr);
+        }
+    }
+
+    public static void print_array(String namespace, int[] arr) {
+        System.out.printf("%s: ", namespace);
+        for(int i : arr) {
+            System.out.printf("%d ", i);
         }
     }
 }

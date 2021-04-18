@@ -12,9 +12,7 @@ public class MergeSort {
         int[] newArr = Arrays.stream(arr).mapToInt(Integer::intValue).toArray();
         mergeSort(newArr, 0, ARRAY_SIZE-1);
 
-        for(int i : newArr) {
-            System.out.println(i);
-        }
+        print_array("MergeSort", newArr);
     }
 
     public static void mergeSort(int[] arr, int start, int end) {
@@ -48,6 +46,13 @@ public class MergeSort {
 
         for(int k = 0; k < l; k++) {
             arr[k+start] = map[k];
+        }
+    }
+
+    public static void print_array(String namespace, int[] arr) {
+        System.out.printf("%s: ", namespace);
+        for(int i : arr) {
+            System.out.printf("%d ", i);
         }
     }
 }

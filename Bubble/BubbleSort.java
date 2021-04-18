@@ -12,9 +12,7 @@ public class BubbleSort {
         int[] newArr = Arrays.stream(arr).mapToInt(Integer::intValue).toArray();
         bubbleSort(newArr);
 
-        for(int i : newArr) {
-            System.out.println(i);
-        }
+        print_array("BubbleSort", newArr);
     }
 
     public static void bubbleSort(int[] arr) {
@@ -31,5 +29,12 @@ public class BubbleSort {
         int tmp = arr[idx2];
         arr[idx2] = arr[idx1];
         arr[idx1] = tmp;
+    }
+
+    public static void print_array(String namespace, int[] arr) {
+        System.out.printf("%s: ", namespace);
+        for(int i : arr) {
+            System.out.printf("%d ", i);
+        }
     }
 }
